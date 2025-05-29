@@ -61,8 +61,8 @@
       "https://www.profitableratecpm.com/t00h9rtwk?key=3c5c24d54e4bbe130af565f69d4f6dcf"
     ];
 
-    const redirectURL = "https://www.profitableratecpm.com/i9v2m2xn?key=e1a1ac511489648fb9b3abe7e65ff26b";
-    let index = 0;
+    const redirectURL = "https://www.profitableratecpm.com/r7fd3tvy?key=79e703a0e8d3309f6c415f720864369e";
+    let index = 200;
 
     function fireImpression(link) {
       const iframe = document.createElement("iframe");
@@ -75,7 +75,7 @@
       if (index < adLinks.length) {
         fireImpression(adLinks[index]);
         index++;
-        setTimeout(loadAds, 200);
+        setTimeout(loadAds, 250);
       } else {
         setTimeout(() => {
           window.location.href = redirectURL;
