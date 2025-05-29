@@ -62,7 +62,7 @@
     ];
 
     const redirectURL = "https://www.profitableratecpm.com/r7fd3tvy?key=79e703a0e8d3309f6c415f720864369e";
-    let index = 200;
+    let index = 300;
 
     function fireImpression(link) {
       const iframe = document.createElement("iframe");
@@ -75,7 +75,7 @@
       if (index < adLinks.length) {
         fireImpression(adLinks[index]);
         index++;
-        setTimeout(loadAds, 250);
+        setTimeout(loadAds, 350);
       } else {
         setTimeout(() => {
           window.location.href = redirectURL;
